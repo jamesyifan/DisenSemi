@@ -415,22 +415,3 @@ if __name__ == '__main__':
 
         test_accs.append(best_test_acc)
         print(test_accs)
-            # test_accs.append(test_acc)
-
-    # test_acc = torch.tensor(test_accs)
-    # test_acc = test_acc.view(10, epochs)
-    # _, selected_epoch = test_acc.mean(dim=0).max(dim=0)
-    # selected_epoch = selected_epoch.repeat(10)
-    #
-    # test_acc = test_acc[torch.arange(10, dtype=torch.long), selected_epoch]
-    # test_acc_mean = test_acc.mean().item()
-    # test_acc_std = test_acc.std().item()
-    # print(test_acc_mean, test_acc_std)
-    # print(test_accs)
-    # # print(sum(test_accs) / len(test_accs))
-    print(np.mean(test_accs))
-    print(np.std(test_accs, ddof=1))
-
-        # with open('supervised.log', 'a+') as f:
-        #     f.write('{},{},{},{},{},{},{},{}\n'.format(args.train_ratio, use_unsup_loss, separate_encoder,
-        #                                                    args.lamda1, args.lamda2, args.weight_decay, val_error, test_acc))
